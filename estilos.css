@@ -1,0 +1,1317 @@
+/* --- ESTILOS GENERALES --- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* --- BARRA SUPERIOR --- */
+.barra-superior {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 70px;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.logo{
+  width: 200px;
+  padding-bottom: 20px;
+  margin-left: 100px;
+}
+
+.select:hover{
+  color: #80206a;
+  font-weight: 100;
+}
+
+.espacio{
+  margin-left: 100px;
+}
+
+.segundo{
+  display: flex;
+  flex-direction: column;
+}
+
+.tercera-navegacion{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
+  margin-bottom: 20px;
+}
+
+.tercera{
+  color: #80206a;
+}
+
+.inicio{
+  background: none;
+  border-radius: 30px;
+  height: 40px;
+  border-color: #80206a;
+  width: 110px;
+  border-width: 1px;
+  font-size: 13px;
+}
+
+.navegacion-secundaria{
+  margin-right: 150px;
+}
+
+li{
+    width: 100px;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.navegacion-principal ul,
+.navegacion-secundaria ul {
+ display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.navegacion-principal a {
+  font-weight: bold;
+}
+
+/* Menú hamburguesa (oculto por defecto) */
+.menu-hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-hamburguesa span {
+  width: 25px;
+  height: 3px;
+  background-color: #80206a;
+  transition: 0.3s;
+}
+
+/* --- SECCION HERO (BUSCADOR Y BANNER) --- */
+.seccion-hero {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contenedor-buscador {
+  width: 50%;
+  padding: 20px;
+  background-color: #fdfdfd;
+}
+
+.pestañas-viaje {
+  display: flex;
+  border-bottom: 2px solid #eee;
+}
+
+.pestaña {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #888;
+}
+
+.pestaña.activa {
+  color: #6a00a8;
+  font-weight: bold;
+  border-bottom: 3px solid #6a00a8;
+}
+
+.formulario-vuelo {
+  margin-top: 20px;
+}
+
+.campos-dobles {
+  display: flex;
+  gap: 20px;
+}
+
+.campo {
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.campo label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+#origen,
+#destino {
+  /* height: 80px; */ /* Comentado para que el nuevo estilo de formulario controle la altura */
+}
+
+.campo input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-right: 35px;
+  box-sizing: border-box;
+}
+
+.icono-campo {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  color: #888;
+}
+
+.campo-codigo-promo a {
+  font-size: 14px;
+  color: #6a00a8;
+  font-weight: bold;
+}
+
+.botones-busqueda {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.boton-hotel,
+.boton-buscar {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.boton-hotel {
+  background-color: #f0f0f0;
+  color: #6a00a8;
+  border: 1px solid #6a00a8;
+  /* width: 250px; */ /* Comentado para que el nuevo estilo de formulario controle la anchura */
+}
+
+.boton-buscar {
+  background-color: #6a00a8;
+  color: white;
+  /* width: 250px; */ /* Comentado para que el nuevo estilo de formulario controle la anchura */
+}
+
+.contenedor-banner {
+  width: 50%;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a2e;
+}
+
+/* --- SLIDER --- */
+.slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.slide {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider-boton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.slider-boton.prev {
+  left: 10px;
+}
+
+.slider-boton.next {
+  right: 10px;
+}
+
+.slider-boton:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.terminos-link {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+  color: white;
+  font-size: 12px;
+  text-decoration: underline;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dot.active {
+  background-color: #ffffff;
+}
+
+/* --- SECCION MEJORES VUELOS --- */
+.seccion-mejores-vuelos {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.seccion-mejores-vuelos h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.controles-vuelos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.boton-reiniciar {
+  background: none;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 12px;
+}
+
+.ordenar-por {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; 
+}
+
+.tarjeta-vuelo {
+  flex-basis: 280px; 
+  flex-shrink: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.tarjeta-vuelo img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.info-tarjeta {
+  padding: 15px;
+}
+
+.tipo-vuelo {
+  font-size: 12px;
+  color: #777;
+}
+
+.info-tarjeta h3 {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.fecha-vuelo {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.precio {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.precio strong {
+  font-size: 20px;
+  color: #6a00a8;
+  display: block;
+}
+
+.detalles-vuelo {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.boton-reservar {
+  width: 100%;
+  background-color: #6a00a8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* --- SECCION PAGO SEGURO --- */
+.seccion-pago-seguro {
+  background-color: #f7f7f7;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.contenedor-pago-seguro {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.columna-pago {
+  width: 45%;
+}
+
+.columna-pago h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+}
+
+.logos-pago {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.logo-pago {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.link-info {
+  font-size: 12px;
+  color: #6a00a8;
+  text-decoration: underline;
+}
+
+/* --- SECCION PRODUCTOS --- */
+.seccion-productos {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fila-productos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-producto {
+  transition: transform 0.3s ease;
+  flex-basis: 220px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  position: relative; 
+}
+
+.prueba:hover{
+  transform: translateY(-20px);
+  box-shadow: 
+    5px 0 10px -5px rgba(0, 0, 0, 0.3),
+    -5px 0 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.fila-productos:first-child .tarjeta-producto {
+  background-color: #ffffff;
+}
+
+.fila-productos:last-child .tarjeta-producto {
+  background-color: #f9f9f9;
+  min-height: 220px; 
+}
+
+.tarjeta-producto img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.tarjeta-producto h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.tarjeta-producto p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  min-height: 80px;
+}
+
+.etiqueta-nuevo {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #00aaff;
+  color: white;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- PIE DE PAGINA --- */
+.pie-pagina {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.contenedor-pie {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pie-superior {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.columna-pie {
+  flex: 1;
+  min-width: 200px;
+}
+
+.columna-pie:nth-child(2) {
+  flex: 1.5;
+}
+
+.columna-pie h4 {
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.columna-pie ul {
+  padding: 0;
+  margin: 0;
+}
+
+.columna-pie li {
+  margin-bottom: 10px;
+}
+
+.columna-pie a {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.columna-pie a:hover {
+  text-decoration: underline;
+}
+
+.app-botones {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.boton-app img.app-img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+.icono-social {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.icono-social img.social-img {
+  width: 24px;
+  height: auto;
+  display: block;
+}
+
+.titulo-siguenos {
+  margin-top: 30px;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pie-intermedio {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  flex-wrap: wrap;
+}
+
+.pie-intermedio a {
+  flex: 1;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.pie-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.copyright {
+  margin: 0;
+}
+
+.links-legales {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.links-legales a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+======================================== */
+
+/* --- TABLET (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .barra-superior {
+    flex-direction: column;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  .logo {
+    width: 150px;
+    margin-left: 0;
+    padding-bottom: 10px;
+  }
+
+  .espacio {
+    margin-left: 0;
+  }
+
+  /* Menú hamburguesa visible */
+  .menu-hamburguesa {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  /* Ocultar menús por defecto */
+  .navegacion-principal ul,
+  .navegacion-secundaria ul,
+  .tercera-navegacion {
+    display: none;
+  }
+
+  /* Mostrar menús cuando está activo */
+  .barra-superior.menu-activo .navegacion-principal ul,
+  .barra-superior.menu-activo .navegacion-secundaria ul,
+  .barra-superior.menu-activo .tercera-navegacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .navegacion-secundaria {
+    margin-right: 0;
+  }
+
+  .tercera-navegacion {
+    margin-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Hero section en columna */
+  .seccion-hero {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .contenedor-buscador,
+  .contenedor-banner {
+    width: 100%;
+  }
+
+  .contenedor-banner {
+    min-height: 300px;
+  }
+
+  .slide {
+    height: 300px;
+  }
+
+  /* Controles de vuelos */
+  .ordenar-por {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Tarjetas de vuelo */
+  .contenedor-tarjetas {
+    /* flex-wrap: wrap; */ /* COMENTADO: Esto rompía el scroll horizontal */
+    justify-content: center;
+  }
+
+  .tarjeta-vuelo {
+    flex-basis: calc(50% - 10px);
+    min-width: 250px;
+  }
+
+  /* Sección de pago */
+  .contenedor-pago-seguro {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .columna-pago {
+    width: 100%;
+  }
+
+  /* Productos */
+  .fila-productos {
+    justify-content: center;
+  }
+
+  .tarjeta-producto {
+    flex-basis: calc(50% - 10px);
+    min-width: 200px;
+  }
+}
+
+/* --- MÓVIL (max-width: 768px) --- */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .barra-superior {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .menu-hamburguesa {
+    right: 70px;
+    top: 15px;
+  }
+
+  /* Formulario de búsqueda */
+  .campos-dobles {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #origen,
+  #destino {
+    height: auto; /* Dejar que el estilo del form controle esto */
+  }
+
+  .botones-busqueda {
+    flex-direction: column;
+  }
+
+  .boton-hotel,
+  .boton-buscar {
+    width: 100%;
+  }
+
+  /* Slider */
+  .contenedor-banner {
+    min-height: 250px;
+  }
+
+  .slide {
+    height: 250px;
+  }
+
+  .slider-boton {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  /* Mejores vuelos */
+  .seccion-mejores-vuelos h2 {
+    font-size: 20px;
+  }
+
+  .controles-vuelos {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tarjeta-vuelo {
+    flex-basis: 100%;
+    max-width: 400px;
+  }
+
+  /* Productos */
+  .tarjeta-producto {
+    flex-basis: 100%;
+    max-width: 350px;
+  }
+
+  /* Footer */
+  .pie-superior {
+    flex-direction: column;
+  }
+
+  .columna-pie {
+    width: 100%;
+  }
+
+  .pie-intermedio {
+    flex-direction: column;
+  }
+
+  .pie-intermedio a {
+    width: 100%;
+  }
+
+  .pie-inferior {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links-legales {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* --- MÓVIL PEQUEÑO (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
+
+  .seccion-hero {
+    margin: 10px;
+  }
+
+  .contenedor-buscador {
+    padding: 15px;
+  }
+
+  .pestaña {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .campo input {
+    font-size: 14px;
+  }
+
+  .boton-hotel,
+  .boton-buscar {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contenedor-banner {
+    min-height: 200px;
+  }
+
+  .slide {
+    height: 200px;
+  }
+
+  .seccion-mejores-vuelos {
+    padding: 0 10px;
+  }
+
+  .seccion-mejores-vuelos h2 {
+    font-size: 18px;
+  }
+
+  .controles-vuelos {
+    font-size: 12px;
+  }
+
+  .tarjeta-vuelo {
+    max-width: 100%;
+  }
+
+  .info-tarjeta h3 {
+    font-size: 14px;
+  }
+
+  .seccion-pago-seguro {
+    padding: 20px 10px;
+  }
+
+  .logo-img {
+    width: 32px;
+  }
+
+  .tarjeta-producto {
+    padding: 15px;
+  }
+
+  .tarjeta-producto h3 {
+    font-size: 16px;
+  }
+
+  .tarjeta-producto p {
+    font-size: 13px;
+    min-height: 60px;
+  }
+
+  .pie-pagina {
+    padding: 30px 15px;
+  }
+
+  .columna-pie h4 {
+    font-size: 14px;
+  }
+
+  .columna-pie a {
+    font-size: 12px;
+  }
+
+  .app-botones img.app-img {
+    width: 100px;
+  }
+
+  .icono-social {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icono-social img.social-img {
+    width: 20px;
+  }
+
+}
+
+
+/* ===== FORMULARIO DE VUELO MEJORADO ===== */
+.formulario-vuelo {
+  /* background: rgba(255, 255, 255, 0.9); */ /* Sobreescrito por .contenedor-buscador */
+  /* padding: 2rem; */ /* Sobreescrito por .contenedor-buscador */
+  border-radius: 1rem;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */ /* Sobreescrito por .seccion-hero */
+  backdrop-filter: blur(5px);
+}
+
+/* Agrupaciones dobles */
+.campos-dobles {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.campo label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+/* Inputs generales */
+.campo input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box; /* Asegura padding correcto */
+  width: 100%; /* Asegura anchura completa */
+}
+
+.campo input[type="text"]:read-only {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+
+.campo input:focus {
+  border-color: #6a1b9a;
+  box-shadow: 0 0 5px rgba(106, 27, 154, 0.3);
+}
+
+/* ===== SELECTORES PERSONALIZADOS (Origen / Destino) ===== */
+.campo-select .selector {
+  position: relative;
+}
+
+.lista-opciones {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  width: 100%; /* Asegura que la lista ocupe todo el ancho */
+  padding: 0;
+  margin: 0;
+}
+
+.lista-opciones.visible {
+  display: block;
+}
+
+.lista-opciones li {
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: auto; /* Resetea la anchura de 'li' base */
+}
+
+.lista-opciones li:hover {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+/* ===== CAMPO PASAJEROS ===== */
+.campo-pasajeros {
+  margin-bottom: 1rem;
+}
+
+.selector-pasajeros {
+  position: relative;
+}
+
+.menu-pasajeros {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 10;
+}
+
+.menu-pasajeros.visible {
+  display: block;
+}
+
+.fila-pasajero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contador button {
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  line-height: 28px; /* Centra el símbolo */
+  padding: 0;
+}
+
+.contador button:hover {
+  background: #4a0072;
+}
+
+.contador .valor {
+  min-width: 20px;
+  text-align: center;
+}
+
+.btn-listo {
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-listo:hover {
+  background: #4a0072;
+}
+
+/* ===== BOTONES DE BÚSQUEDA ===== */
+.botones-busqueda {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.boton-hotel,
+.boton-buscar {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton-hotel {
+  background: #f3e5f5;
+  color: #6a1b9a;
+  border: 1px solid #6a1b9a; /* Asegura consistencia */
+}
+
+.boton-hotel:hover {
+  background: #e1bee7;
+}
+
+.boton-buscar {
+  background: #6a1b9a;
+  color: white;
+}
+
+.boton-buscar:hover {
+  background: #4a0072;
+}
+
+/* --- ESTILOS PARA SLIDER DE TARJETAS DE VUELO (NUEVO) --- */
+
+.tarjetas-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Ajustes al contenedor de tarjetas original */
+.contenedor-tarjetas {
+  /* ... (tus estilos existentes como display:flex, gap, etc. se mantienen) ... */
+  
+  /* NUEVO: añade scroll suave y oculta la barra de scroll */
+  scroll-behavior: smooth;
+  /* Ocultar barra en Firefox */
+  scrollbar-width: none; 
+}
+
+/* Ocultar barra en Chrome, Safari, Edge */
+.contenedor-tarjetas::-webkit-scrollbar {
+  display: none;
+}
+
+.tarjeta-slider-boton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  color: #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+
+.tarjeta-slider-boton:hover {
+  background-color: #ffffff;
+}
+
+.tarjeta-slider-boton.prev {
+  left: -15px; /* Posiciona la flecha izquierda */
+}
+
+.tarjeta-slider-boton.next {
+  right: -15px; /* Posiciona la flecha derecha */
+}
+
+/* Ajuste para que los botones no se vean tan afuera en móviles */
+@media (max-width: 768px) {
+  .tarjeta-slider-boton.prev {
+    left: 5px;
+  }
+  .tarjeta-slider-boton.next {
+    right: 5px;
+  }
+}

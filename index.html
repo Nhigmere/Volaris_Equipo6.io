@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volaris</title>
+    <link
+      href="https://www.volaris.com/uipl-assets/images/volaris-logo.svg"
+      rel="icon"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="barra-superior">
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <nav class="navegacion-principal">
+          <img
+            src="https://www.volaris.com/uipl-assets/images/volaris-logo.svg"
+            class="logo"
+            alt="Logo de volaris"
+          />
+          <ul class="espacio">
+            <li><a class="select" href="#">Vuelo+Hotel</a></li>
+            <li><a class="select" href="#">Mi reserva</a></li>
+            <li><a class="select" href="#">Estatus de vuelo</a></li>
+          </ul>
+        </nav>
+        
+        <div class="menu-hamburguesa" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="segundo">
+        <nav class="tercera-navegacion">
+          
+          <a class="tercera" href="#">Registrate</a>
+          <button class="tercera inicio">Iniciar Sesion</button>
+        </nav>
+        <nav class="navegacion-secundaria">
+        <ul>
+          <li><a href="#">Caja de eje</a></li>
+          <li><a href="#">Afiliados</a></li>
+          <li><a href="#">Nuestros destinos</a></li>
+          <li><a href="#">Promociones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+    <main>
+      <section class="seccion-hero">
+        <div class="contenedor-buscador">
+          <div class="pestañas-viaje">
+            <button class="pestaña activa">Viaje redondo</button>
+            <button class="pestaña">Viaje sencillo</button>
+          </div>
+
+          
+
+<form class="formulario-vuelo">
+  <div class="campos-dobles">
+    <div class="campo campo-select">
+      <label for="origen">Origen</label>
+      <div class="selector">
+        <input
+          type="text"
+          id="origen"
+          name="origen"
+          placeholder="Selecciona origen"
+          readonly
+        />
+        <ul class="lista-opciones">
+          <li data-value="CDMX">Ciudad de México (MEX)</li>
+          <li data-value="GDL">Guadalajara (GDL)</li>
+          <li data-value="MTY">Monterrey (MTY)</li>
+          <li data-value="CUN">Cancún (CUN)</li>
+          <li data-value="TJU">Tijuana (TIJ)</li>
+          <li data-value="OAX">Oaxaca (OAX)</li>
+          <li data-value="PVR">Puerto Vallarta (PVR)</li>
+          <li data-value="HMO">Hermosillo (HMO)</li>
+          <li data-value="VER">Veracruz (VER)</li>
+          <li data-value="QRO">Querétaro (QRO)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="campo campo-select">
+      <label for="destino">Destino</label>
+      <div class="selector">
+        <input
+          type="text"
+          id="destino"
+          name="destino"
+          placeholder="Selecciona destino"
+          readonly
+        />
+        <ul class="lista-opciones">
+          <li data-value="CUN">Cancún (CUN)</li>
+          <li data-value="GDL">Guadalajara (GDL)</li>
+          <li data-value="MTY">Monterrey (MTY)</li>
+          <li data-value="OAX">Oaxaca (OAX)</li>
+          <li data-value="PVR">Puerto Vallarta (PVR)</li>
+          <li data-value="LAX">Los Ángeles (LAX)</li>
+          <li data-value="DFW">Dallas/Fort Worth (DFW)</li>
+          <li data-value="SJC">San José, CA (SJC)</li>
+          <li data-value="CJS">Ciudad Juárez (CJS)</li>
+          <li data-value="MZT">Mazatlán (MZT)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="campos-dobles">
+    <div class="campo">
+      <label for="salida">Salida</label>
+      <input type="date" id="salida" name="salida" />
+    </div>
+    <div class="campo">
+      <label for="regreso">Regreso</label>
+      <input type="date"id="regreso" name="regreso" />
+    </div>
+  </div>
+
+  <div class="campo campo-pasajeros">
+    <label for="pasajeros">Pasajeros</label>
+    <div class="selector-pasajeros">
+      <input
+        type="text"
+        id="pasajeros"
+        name="pasajeros"
+        value="1 Adulto"
+        readonly
+      />
+      <div class="menu-pasajeros">
+        <div class="fila-pasajero" data-tipo="Adulto">
+          <span>Adultos</span>
+          <div class="contador">
+            <button type="button" class="menos">−</button>
+            <span class="valor">1</span>
+            <button type="button" class="mas">+</button>
+          </div>
+        </div>
+        <div class="fila-pasajero" data-tipo="Niño">
+          <span>Niños</span>
+          <div class="contador">
+            <button type="button" class="menos">−</button>
+            <span class="valor">0</span>
+            <button type="button" class="mas">+</button>
+          </div>
+        </div>
+        <div class="fila-pasajero" data-tipo="Bebé">
+          <span>Bebés</span>
+          <div class="contador">
+            <button type="button" class="menos">−</button>
+            <span class="valor">0</span>
+            <button type="button" class="mas">+</button>
+          </div>
+        </div>
+        <button type="button" class="btn-listo">Listo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="campo-codigo-promo">
+    <a href="#">¿Tienes un código de promoción?</a>
+  </div>
+
+  <div class="botones-busqueda">
+    <button type="button" class="boton-hotel">Volaris + Hotel</button>
+    <button type="submit" class="boton-buscar">Buscar vuelos</button>
+  </div>
+</form>
+
+
+
+        </div>
+
+        <div class="contenedor-banner">
+          <div class="slider">
+            <div class="slide">
+              <img src="imagenes/1.png" alt="Vuelo promoción invierno" />
+            </div>
+
+            <div class="slide">
+              <img src="imagenes/2.png" alt="Vuelo promoción 2" />
+            </div>
+
+            <div class="slide">
+              <img src="imagenes/3.png" alt="Vuelo promoción 3" />
+            </div>
+          </div>
+
+          <button class="slider-boton prev">&#10094;</button>
+          <button class="slider-boton next">&#10095;</button>
+
+          <a href="#" class="terminos-link"> *Términos y Condiciones </a>
+
+          <div class="slider-dots"></div>
+        </div>
+      </section>
+      
+      <section class="seccion-mejores-vuelos">
+        <h2>Mejores vuelos con Volaris</h2>
+
+        <div class="controles-vuelos">
+          <span> De: Cd. México (MEX) </span>
+          <span> Presupuesto </span>
+          <button class="boton-reiniciar">Reiniciar</button>
+          <span class="ordenar-por"> Ordenar por Popularidad </span>
+        </div>
+
+        <div class="tarjetas-slider-wrapper">
+          <button class="tarjeta-slider-boton prev" id="tarjetas-prev">&#10094;</button>
+
+          <div class="contenedor-tarjetas">
+            
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPGaMXhJl7p_H8HEh6GUM3x_mjd9inS4XoPA&s"
+                alt="Playa de Cancún"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 1/12 </span>
+                <h3>Ciudad de México (MEX) a Cancún (CUN)</h3>
+                <p class="fecha-vuelo">15/01/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 689 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 9h 45m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://media.istockphoto.com/id/887640862/es/foto/calle-santiago-arguello-tijuana-m%C3%A9xico.jpg?s=612x612&w=0&k=20&c=Zf067uXM27xnKzpWKunDz8Qp41p2-JuRVNMn4CeMwIs="
+                alt="Tijuana"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 2/12 </span>
+                <h3>Ciudad de México (MEX) a Tijuana (TIJ)</h3>
+                <p class="fecha-vuelo">09/01/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 1,129 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 4h 45m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://mexpatrealtors.com/wp-content/uploads/2025/01/Guadalajara-Mexico-Puerto-Vallarta-Real-estate-condos-for-sale.jpeg"
+                alt="Guadalajara"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 3/12 </span>
+                <h3>Ciudad de México (MEX) a Guadalajara (GDL)</h3>
+                <p class="fecha-vuelo">15/01/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 359 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 5h 45m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+            
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://ocvmty.com.mx/wp-content/uploads/monterrey-nl-3.jpg"
+                alt="Monterrey"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 4/12 </span>
+                <h3>Ciudad de México (MEX) a Monterrey (MTY)</h3>
+                <p class="fecha-vuelo">26/01/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 259 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 6h 45m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+            
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://media.istockphoto.com/id/1088463742/photo/landmark-santo-domingo-cathedral-in-historic-oaxaca-city-center.jpg?s=612x612&w=0&k=20&c=ePpA1UeTZqR_DhHZDe4X1KXEsTvgnWeK-POnd8Rsz28="
+                alt="Oaxaca"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 5/12 </span>
+                <h3>Ciudad de México (MEX) a Oaxaca (OAX)</h3>
+                <p class="fecha-vuelo">18/02/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 499 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 1h 15m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://t3.ftcdn.net/jpg/03/68/06/84/360_F_368068462_N4hlKoY2DzXjcn9tmoZLCxDtr9Vx3KNG.jpg"
+                alt="Puerto Vallarta"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 6/12 </span>
+                <h3>Ciudad de México (MEX) a Puerto Vallarta (PVR)</h3>
+                <p class="fecha-vuelo">22/01/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 729 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 1h 30m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://media.istockphoto.com/id/1414043343/es/foto/m%C3%A9xico-vista-panor%C3%A1mica-del-puerto-de-la-ciudad-de-veracruz-con-buques-portacontenedores.jpg?s=612x612&w=0&k=20&c=Wv1RjCWE8nuxCjfQJgPNadAR3PWNDnRZP0AGmwBQu-E="
+                alt="Veracruz"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 7/12 </span>
+                <h3>Ciudad de México (MEX) a Veracruz (VER)</h3>
+                <p class="fecha-vuelo">10/02/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 419 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 1h 10m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://media.istockphoto.com/id/1301308171/es/foto/la-x.jpg?s=612x612&w=0&k=20&c=SkTs2rGf58gffXDV2npQm7rux9RdTPuUwIVfNpvKN3E="
+                alt="Ciudad Juárez"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 8/12 </span>
+                <h3>Ciudad de México (MEX) a Ciudad Juárez (CJS)</h3>
+                <p class="fecha-vuelo">05/03/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 989 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 2h 20m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://t4.ftcdn.net/jpg/02/82/21/83/360_F_282218305_3QpKlg4tp3hHcBEcv7YP3tnSt0W1AHr4.jpg"
+                alt="Mérida"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 9/12 </span>
+                <h3>Ciudad de México (MEX) a Mérida (MID)</h3>
+                <p class="fecha-vuelo">15/03/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 819 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 1h 45m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://visitchiapas.com/v1/admin/archivos/Turismo/multimedia/ea21c17f_08042020_0506.jpg"
+                alt="Tuxtla Gutiérrez"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 10/12 </span>
+                <h3>Ciudad de México (MEX) a Tuxtla Gutiérrez (TGZ)</h3>
+                <p class="fecha-vuelo">20/03/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 539 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 1h 25m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://www.shutterstock.com/image-photo/aerial-view-arch-el-arco-600nw-1869263059.jpg"
+                alt="Los Cabos"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 11/12 </span>
+                <h3>Ciudad de México (MEX) a Los Cabos (SJD)</h3>
+                <p class="fecha-vuelo">01/04/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 999 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 2h 05m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            <div class="tarjeta-vuelo">
+              <img
+                src="https://t4.ftcdn.net/jpg/03/99/80/61/360_F_399806145_Ynz4XnrIOuTytBy7oRG1KHTKI6nM4wGT.jpg"
+                alt="La Paz"
+              />
+              <div class="info-tarjeta">
+                <span class="tipo-vuelo"> 12/12 </span>
+                <h3>Ciudad de México (MEX) a La Paz (LAP)</h3>
+                <p class="fecha-vuelo">05/04/2026</p>
+                <p class="precio">
+                  Desde
+                  <strong> 879 MXN* </strong>
+                </p>
+                <p class="detalles-vuelo">Vuelo Redondo. 2h 00m de...</p>
+                <button class="boton-reservar">Reserva ahora</button>
+              </div>
+            </div>
+
+            </div>
+
+          <button class="tarjeta-slider-boton next" id="tarjetas-next">&#10095;</button>
+        </div>
+        </section>
+
+      <section class="seccion-pago-seguro">
+        <div class="contenedor-pago-seguro">
+          
+          <div class="columna-pago">
+            <h4>
+              Tarjetas de crédito, tarjetas de débito y pago electrónico
+            </h4>
+            <div class="logos-pago">
+              <span class="logo-pago logo-visa">
+                <img src="imagenes/visa.svg" alt="Visa" class="logo-img">
+              </span>
+              <span class="logo-pago logo-mastercard">
+                <img src="imagenes/mastercard.svg" alt="Mastercard" class="logo-img">
+              </span>
+              <span class="logo-pago logo-amex">
+                <img src="imagenes/amex.svg" alt="American Express" class="logo-img">
+              </span>
+              <span class="logo-pago logo-paypal">
+                <img src="imagenes/paypal.svg" alt="PayPal" class="logo-img">
+              </span>
+            </div>
+            <a href="#" class="link-info">
+              Ver más información
+            </a>
+          </div>
+
+          <div class="columna-pago">
+            <h4>
+              Efectivo en cualquiera de las sucursales participantes
+            </h4>
+            <div class="logos-pago">
+              <span class="logo-pago logo-oxxo">
+                <img src="imagenes/oxxo.svg" alt="OXXO" class="logo-img">
+              </span>
+              <span class="logo-pago logo-seven">
+                <img src="imagenes/7eleven.svg" alt="7-Eleven" class="logo-img">
+              </span>
+              <span class="logo-pago logo-walmart">
+                <img src="imagenes/walmart.svg" alt="Walmart" class="logo-img">
+              </span>
+              <span class="logo-pago logo-aurrera">
+                <img src="imagenes/bodegaaurrera.svg" alt="Bodega Aurrera" class="logo-img">
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="seccion-productos">
+        <div class="fila-productos">
+          <div class="tarjeta-producto prueba">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/internalproducts/altitude_img.png"
+              alt="Icono Altitude"
+            />
+            <h3>altitude</h3>
+            <p>
+              Ahora puedes acumular puntos por todas tus compras, ¡vuela y paga
+              con ellos!
+            </p>
+            <button class="boton-reservar">Inscríbete ahora</button>
+          </div>
+
+          <div class="tarjeta-producto prueba">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/internalproducts/paseanual_card.png"
+              alt="Icono Pase Anual"
+            />
+            <h3>Pase Anual</h3>
+            <p>Vuela todo lo que puedas por un año.</p>
+            <button class="boton-reservar">Inscríbete ahora</button>
+          </div>
+
+          <div class="tarjeta-producto prueba">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/internalproducts/pass_02.png"
+              alt="Icono v.pass"
+            />
+            <h3>v.pass</h3>
+            <p>
+              Un viaje te espera cada mes, v.pass, tu suscripción de vuelos.
+            </p>
+            <button class="boton-reservar">Suscríbete ahora</button>
+          </div>
+
+          <div class="tarjeta-producto prueba">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/internalproducts/pass_03.nueva1.png"
+              alt="Icono INVEX"
+            />
+            <h3>INVEX</h3>
+            <p>
+              Acumula pesos para comprar tus vuelos, ¡los miles te pueden
+              alcanzar! Paga después y hasta a meses sin intereses.
+            </p>
+            <button class="boton-reservar">Solicita tu tarjeta</button>
+          </div>
+        </div>
+
+        <div class="fila-productos">
+          <div class="tarjeta-producto">
+            <span class="etiqueta-nuevo"> NUEVO EN VOLARIS </span>
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/externalproducts/hoveryavas_es.svg"
+              alt="Icono Vuelo + Hotel"
+            />
+            <h3>Vuelo + Hotel</h3>
+            <p>Encuentra los mejores precios ¡en un clic!</p>
+          </div>
+
+          <div class="tarjeta-producto">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/externalproducts/hoverv.business.svg"
+              alt="Icono v.business"
+            />
+            <h3>v.business</h3>
+            <p>
+              La membresía con beneficios exclusivos para tus viajes de
+              negocios.
+            </p>
+          </div>
+
+          <div class="tarjeta-producto">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/externalproducts/hovergroups.svg"
+              alt="Icono Grupos"
+            />
+            <h3>Grupos</h3>
+            <p>Obtén una cotización para grupos de más de 9 personas.</p>
+          </div>
+
+          <div class="tarjeta-producto">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/externalproducts/hoveraifabenefits.svg"
+              alt="Icono Beneficios AIFA"
+            />
+            <h3>Beneficios AIFA</h3>
+            <p>
+              Obtén un precio preferencial en las casetas de la autopista al
+              viajar desde o hacia el aeropuerto Felipe Ángeles.
+            </p>
+          </div>
+
+          <div class="tarjeta-producto">
+            <img
+              src="https://cms.volaris.com/globalassets/1nextgen/externalproducts/hovercargo.svg"
+              alt="Icono Carga"
+            />
+            <h3>Carga</h3>
+            <p>Contamos con servicio de carga y mensajería.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="pie-pagina">
+      <div class="contenedor-pie">
+        
+        <div class="pie-superior">
+          
+          <div class="columna-pie">
+            <h4>
+              Nuestras rutas
+            </h4>
+            <ul>
+              <li>
+                <a href="#">
+                  Vuelos a Aguascalientes
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Cancún
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Guatemala
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Culiacán
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Guadalajara
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a León
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Ciudad de México
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Morelia
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Tijuana
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Toluca
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Costa Rica
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Los Ángeles
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Vuelos a Chicago
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columna-pie">
+            <h4>
+              Información para tu viaje y derechos de los pasajeros
+            </h4>
+            <ul>
+              <li>
+                <a href="#">
+                  Flex-Ticket
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Tarjetas Volaris INVEX
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Derechos que tienes al viajar con Volaris
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Equipaje
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Pase de abordar
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Cambio de vuelo
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Altitude
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  v.club
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  v.business
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Suscripciones Volaris
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Documentos de viaje por país
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Conoce yavas.com
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Viajar con bebés
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Pagos diferidos
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Voucher electrónico
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Tarifas de Servicios Adicionales
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Cancela tu reservación
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  TUA
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Aeropuerto de Bogotá
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Requisitos para vuelos a Colombia
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Facturación electrónica
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Pase anual
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columna-pie">
+            <h4>
+              Sobre Volaris
+            </h4>
+            <ul>
+              <li>
+                <a href="#">
+                  Somos la aerolínea de ultra-bajo costo con vuelos en México, Estados Unidos, Centroamérica y Sudamérica.
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Trabaja con nosotros
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Relación con inversionistas
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Sostenibilidad corporativa
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Sala de prensa
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Blog Volaris
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Revista V de Volaris
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Mapa de sitio
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="columna-pie">
+            <h4>
+              Descarga nuestra aplicación
+            </h4>
+            <div class="app-botones">
+              <a class="boton-app" aria-label="Google Play">
+                <img src="imagenes/google-play.svg" alt="Google Play" class="app-img">
+              </a>
+              <a class="boton-app" aria-label="App Store">
+                <img src="imagenes/app-store.svg" alt="App Store" class="app-img">
+              </a>
+            </div>
+
+            <h4 class="titulo-siguenos">
+              Síguenos
+            </h4>
+            <div class="redes-sociales">
+              <a class="icono-social" aria-label="Facebook">
+                <img src="imagenes/facebook.svg" alt="Facebook" class="social-img">
+              </a>
+              <a class="icono-social" aria-label="X">
+                <img src="imagenes/x.svg" alt="X" class="social-img">
+              </a>
+              <a class="icono-social" aria-label="Instagram">
+                <img src="imagenes/instagram.svg" alt="Instagram" class="social-img">
+              </a>
+              <a class="icono-social" aria-label="LinkedIn">
+                <img src="imagenes/linkedin.svg" alt="LinkedIn" class="social-img">
+              </a>
+              <a class="icono-social" aria-label="TikTok">
+                <img src="imagenes/tiktok.svg" alt="TikTok" class="social-img">
+              </a>
+              <a class="icono-social" aria-label="WhatsApp">
+                <img src="imagenes/whatsapp.svg" alt="WhatsApp" class="social-img">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pie-intermedio">
+          <a href="#">
+            Ver todas las rutas
+          </a>
+          <a href="#">
+            Ver todo
+          </a>
+          <a href="#">
+            Más sobre Volaris
+          </a>
+        </div>
+
+        <div class="pie-inferior">
+          <p class="copyright">
+            © 2023 Volaris y sus logotipos son marcas registradas de Volaris.
+          </p>
+          <div class="links-legales">
+            <a href="#">
+              Términos y condiciones para volaris.com
+            </a>
+            <a href="#">
+              Aviso de privacidad
+            </a>
+            <a href="#">
+              Información legal
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const barra = document.querySelector('.barra-superior');
+        barra.classList.toggle('menu-activo');
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        
+
+        const slider = document.querySelector(".slider");
+        const slides = document.querySelectorAll(".slide");
+        const botonAnterior = document.querySelector(".slider-boton.prev");
+        const botonSiguiente = document.querySelector(".slider-boton.next");
+        const dotsContainer = document.querySelector(".slider-dots");
+
+        if (slider && slides.length > 0 && botonAnterior && botonSiguiente && dotsContainer) {
+          let slideActual = 0;
+          const totalSlides = slides.length;
+
+          function actualizarDots(indice) {
+            const allDots = document.querySelectorAll(".dot");
+            allDots.forEach(function (dot) {
+              dot.classList.remove("active");
+            });
+            allDots[indice].classList.add("active");
+          }
+
+          function moverASlide(indice) {
+            slider.style.transform = `translateX(-${indice * 100}%)`;
+            actualizarDots(indice);
+          }
+
+          slides.forEach(function (slide, index) {
+            const dot = document.createElement("span");
+            dot.classList.add("dot");
+
+            dot.addEventListener("click", function () {
+              slideActual = index;
+              moverASlide(slideActual);
+            });
+
+            dotsContainer.appendChild(dot);
+          });
+
+          botonSiguiente.addEventListener("click", function () {
+            slideActual = (slideActual + 1) % totalSlides;
+            moverASlide(slideActual);
+          });
+
+          botonAnterior.addEventListener("click", function () {
+            slideActual = (slideActual - 1 + totalSlides) % totalSlides;
+            moverASlide(slideActual);
+          });
+
+          moverASlide(0);
+        }
+
+
+        document.querySelectorAll(".campo-select .selector").forEach((selector) => {
+          const input = selector.querySelector("input");
+          const lista = selector.querySelector(".lista-opciones");
+
+          input.addEventListener("click", (e) => {
+            e.stopPropagation();
+            // Cerrar otras listas
+            document.querySelectorAll(".lista-opciones.visible").forEach(l => {
+              if (l !== lista) l.classList.remove("visible");
+            });
+            lista.classList.toggle("visible");
+          });
+
+          lista.querySelectorAll("li").forEach((opcion) => {
+            opcion.addEventListener("click", () => {
+              input.value = opcion.textContent;
+              lista.classList.remove("visible");
+            });
+          });
+        });
+
+        // PASAJEROS
+        const selectorPasajeros = document.querySelector(".selector-pasajeros");
+        if (selectorPasajeros) {
+          const pasajeroInput = document.getElementById("pasajeros");
+          const menu = selectorPasajeros.querySelector(".menu-pasajeros");
+
+          pasajeroInput.addEventListener("click", (e) => {
+            e.stopPropagation();
+            menu.classList.toggle("visible");
+          });
+
+          // Función para actualizar el texto del input
+          function actualizarInputPasajeros() {
+            const filas = menu.querySelectorAll(".fila-pasajero");
+            let textoFinal = [];
+            filas.forEach(fila => {
+              const tipo = fila.dataset.tipo; // "Adulto", "Niño", "Bebé"
+              const cantidad = parseInt(fila.querySelector(".valor").textContent);
+              
+              if (cantidad > 0) {
+                textoFinal.push(`${cantidad} ${tipo}${cantidad > 1 ? 's' : ''}`);
+              }
+            });
+            pasajeroInput.value = textoFinal.length > 0 ? textoFinal.join(", ") : "0 Adultos";
+          }
+
+          menu.querySelectorAll(".contador").forEach((contador) => {
+            const menos = contador.querySelector(".menos");
+            const mas = contador.querySelector(".mas");
+            const valor = contador.querySelector(".valor");
+            const fila = contador.closest(".fila-pasajero");
+            const esAdulto = fila.dataset.tipo === "Adulto";
+
+            menos.addEventListener("click", () => {
+              let v = parseInt(valor.textContent);
+              // Lógica para no bajar de 1 adulto
+              if (esAdulto && v <= 1) return;
+              if (!esAdulto && v <= 0) return;
+              
+              valor.textContent = v - 1;
+              actualizarInputPasajeros();
+            });
+
+            mas.addEventListener("click", () => {
+              let v = parseInt(valor.textContent);
+              valor.textContent = v + 1;
+              actualizarInputPasajeros();
+            });
+          });
+
+          menu.querySelector(".btn-listo").addEventListener("click", () => {
+            menu.classList.remove("visible");
+          });
+        }
+
+        // CERRAR MENÚS AL HACER CLIC FUERA
+        document.addEventListener("click", (e) => {
+          // Cerrar selects de origen/destino
+          document.querySelectorAll(".lista-opciones.visible").forEach(lista => {
+            if (!lista.closest('.campo-select').contains(e.target)) {
+              lista.classList.remove("visible");
+            }
+          });
+          
+          // Cerrar menú de pasajeros
+          const menuPasajeros = document.querySelector(".menu-pasajeros");
+          if (menuPasajeros && menuPasajeros.classList.contains("visible")) {
+            if (!menuPasajeros.closest('.campo-pasajeros').contains(e.target)) {
+              menuPasajeros.classList.remove("visible");
+            }
+          }
+        });
+
+
+        // --- 3. LÓGICA DEL SLIDER DE TARJETAS (NUEVO) ---
+        const tarjetasContenedor = document.querySelector('.contenedor-tarjetas');
+        const botonTarjetasPrev = document.getElementById('tarjetas-prev');
+        const botonTarjetasNext = document.getElementById('tarjetas-next');
+
+        if (tarjetasContenedor && botonTarjetasPrev && botonTarjetasNext) {
+          
+          function getScrollAmount() {
+            const primeraTarjeta = tarjetasContenedor.querySelector('.tarjeta-vuelo');
+            if (primeraTarjeta) {
+              const estiloTarjeta = window.getComputedStyle(primeraTarjeta);
+              const gap = parseFloat(window.getComputedStyle(tarjetasContenedor).gap) || 20;
+              return primeraTarjeta.offsetWidth + gap;
+            }
+            return 300; // Valor por defecto
+          }
+
+          botonTarjetasNext.addEventListener('click', () => {
+            tarjetasContenedor.scrollLeft += getScrollAmount();
+          });
+
+          botonTarjetasPrev.addEventListener('click', () => {
+            tarjetasContenedor.scrollLeft -= getScrollAmount();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
